@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) =>{
         }
     };
     const config = {
-        tableName: "users",
+        tableName: "userroll",
         timestamps: false
     };
     const Roll= sequelize.define(name, constructor, config)

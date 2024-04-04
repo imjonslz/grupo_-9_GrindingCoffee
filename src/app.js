@@ -4,6 +4,7 @@ const path = require('path');
 // *************** requerimos y guardamos express *************** //
 const methodOverride = require('method-override');
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const publicPath = path.resolve(__dirname, '../public');
 
@@ -27,6 +28,7 @@ app.use(express.static(publicPath));
 app.use(express.urlencoded({ extended: false })); // Para requerir del body
 app.use(express.json()); 
 app.use(methodOverride('_method'));
+app.use(cors());
 
 // *************** configuramos view engine *************** //
 app.set('view engine', 'ejs');
@@ -38,6 +40,8 @@ let productsRouter = require('./routes/productsRouter.js');
 let usersRouter = require('./routes/usersRouter.js');
 let cartRouter = require('./routes/cartRouter.js');
 let allProducts = require('./routes/allProductsRouter.js');
+let usersApiRouter = require("./routes/API/userRouter.js")
+let productsApiRouter = require("./routes/API/productsRouter.js")
 /* let registerRouter = require('./routes/registerRouter.js'); */
 
 // *************** rutas *************** //
@@ -46,6 +50,8 @@ app.use('/products', productsRouter);
 app.use('/user', usersRouter);
 app.use('/cart', cartRouter);
 app.use('/allProducts', allProducts);
+app.use("/api/user", usersApiRouter)
+app.use("/api/product", productsApiRouter)
 /* app.use('/register', registerRouter); */
 
 // *************** ponemos a escuchar el servidor *************** //

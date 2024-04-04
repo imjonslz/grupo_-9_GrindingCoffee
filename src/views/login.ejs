@@ -21,6 +21,11 @@
                         <div class="inputGroup">
                             <label for="email">Correo electrónico:</label>
                             <input class="inputDefault email" type="email" name="email">
+                            <% if (locals.errors && errors.email) { %>
+                                <p class="errorFeedback">
+                                    <%= errors.email.msg %>
+                                </p>
+                            <% } %>
                             <ul id="emailError" class="errorFeedback"></ul>
                         </div>
                         <div class="inputGroup">
