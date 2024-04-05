@@ -24,7 +24,7 @@ i{
 
 /*/////////////////// NAV ///////////////////*/
 header{
-    overflow: hidden;
+   /*  overflow: hidden; */
     background-color: var(--colorTittleClear);
     position: fixed;
     top: 0;
@@ -261,6 +261,38 @@ footer .flexBox{
 
     footer .flexBox {
         justify-content: space-around;
+    }
+    .navbar{
+        
+        z-index: 10;
+        /*  padding: 1000px!important;  */
+    }
+    .active{
+        display: block;
+    }
+    ul.flexBoxUl1.active {
+        /* display: block; */
+        position: absolute;
+        top: 0; /* Para que se posicione debajo del elemento que lo contiene */
+        left: 25%;
+        width: 25%;
+        height: 200px;
+        background-color: var(--colorTittleClear);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        /* box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2); */
+        z-index: 25;
+    }
+    ul.flexBoxUl2.active {
+        /* display: block; */
+        position: absolute;
+        top: 0; /* Para que se posicione debajo del elemento que lo contiene */
+        right: 25%;
+        width: 25%;
+        height: 200px;
+        background-color: var(--colorTittleClear);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        /* box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2); */
+        z-index: 25;
     }
 }
 

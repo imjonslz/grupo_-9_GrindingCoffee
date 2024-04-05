@@ -1,7 +1,7 @@
 <header>
     <div class="containerNav">
-        <nav class="flexBoxNav">
-            <ul class="flexBoxUl">
+        <nav class="flexBoxNav navbar">
+            <ul class="flexBoxUl flexBoxUl1">
                 <li class="li-nav"><a href="/">Inicio</a></li>
                 <% if (locals.userRoll_id === 1) { %>
                 <li class="li-nav"><a href="/products/create">Crear Producto</a></li>
@@ -12,9 +12,9 @@
                 <a href="/"><img src="/img/gcLogo.svg" alt="Logo de Grinding Coffee"></a>
             </div>
             <div>
-                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-bars" id="menu-icon"></i>
             </div>
-            <ul class="flexBoxUl">
+            <ul class="flexBoxUl flexBoxUl2">
                 <% if (locals.isLogged) { %>
                     <li class="li-nav"><a href="/user/logout">Cerrar Sesion</a></li>
              <!--        de la misma manera se puede poner foto pero ahora no -->
